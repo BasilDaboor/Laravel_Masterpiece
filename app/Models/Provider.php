@@ -24,4 +24,8 @@ class Provider extends Model
     {
         return $this->belongsTo(Service::class);
     }
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }

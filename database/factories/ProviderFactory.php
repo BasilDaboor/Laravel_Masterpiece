@@ -19,9 +19,10 @@ class ProviderFactory extends Factory
     public function definition(): array
     {
         return [
-            //
             'user_id' => User::factory()->provider(),
             'service_id' => Service::factory(),
+            'description' => fake()->paragraph(),
+            'rating' => fake()->randomFloat(1, 0, 5),
         ];
     }
 }
